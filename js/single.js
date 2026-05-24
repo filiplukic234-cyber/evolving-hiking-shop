@@ -11,12 +11,12 @@ let trenutniProizvod = {};
 let korpa = [];
 window.addEventListener("load", () => {
   trenutniId = Number(sessionStorage.getItem("idProizvoda"));
-  fetch(`http://localhost:3000/${trenutniId}`)
+  fetch(`${server_API}/${trenutniId}`)
     .then((proizvod) => proizvod.json())
     .then((proizvodJson) => {
       console.log(proizvodJson);
       trenutniProizvod = proizvodJson[0];
-      slika.innerHTML = `<img src="http://localhost:3000/${trenutniProizvod.img}" alt="">`;
+      slika.innerHTML = `<img src="${server_API}/${trenutniProizvod.img}" alt="">`;
       naziv.textContent = `${trenutniProizvod.name}`;
       cena.textContent = `${trenutniProizvod.price}`;
       opis.textContent = `${trenutniProizvod.desc}`;

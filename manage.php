@@ -8,7 +8,7 @@ $scripts[] = 'manage.js';
     <section class="container">
         <h3 id="naslov-forme">New Product</h3>
 
-        <form method="post" enctype="multipart/form-data" action="http://localhost:3000/add">
+        <form method="post" enctype="multipart/form-data" action="<?php $server ?>/add">
             <div class="form-part">
 
                 <label for="" class="form-label">Name</label>

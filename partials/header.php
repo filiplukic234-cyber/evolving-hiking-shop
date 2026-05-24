@@ -15,6 +15,11 @@
 
     <?php endif; ?>
 
+    <?php
+    $scripts[] = 'config.js';
+    $server = "https://hiking-shop-server01.onrender.com";
+    ?>
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <title>Hiking shop but mine</title>

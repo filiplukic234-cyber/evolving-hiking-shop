@@ -22,7 +22,7 @@ window.addEventListener("load", () => {
 });
 
 const renderProizvoda = () => {
-  fetch("http://localhost:3000/")
+  fetch("${server_API}/")
     .then((response) => response.json())
     .then((responseJson) => {
       proizvodiTabela.innerHTML = "";
@@ -31,7 +31,7 @@ const renderProizvoda = () => {
         proizvodiTabela.innerHTML += `
                  <tr>
                     <th scope="row">${proizvod.id + 1}</th>
-                    <td><img src="http://localhost:3000/${proizvod.img}" alt="" height="30px"></td>
+                    <td><img src="${server_API}/${proizvod.img}" alt="" height="30px"></td>
                     <td>${proizvod.name}</td>
                     <td>${proizvod.qty}</td>
                     <td>$${proizvod.price}</td>
@@ -53,7 +53,7 @@ const vidiProizvod = (id) => {
 };
 
 const ukloniProizvod = (id) => {
-  fetch(`http://localhost:3000/delete/${id}`, {
+  fetch(`${server_API}/delete/${id}`, {
     method: "DELETE",
   })
     .then((res) => res.json())
@@ -72,7 +72,7 @@ const urediProizvod = (id) => {
 
   naslovForme.textContent = "Edit product";
 
-  fetch(`http://localhost:3000/${editingId}`)
+  fetch(`${server_API}/${editingId}`)
     .then((proizvod) => proizvod.json())
     .then((proizvodJson) => {
       //   console.log(resJson);
@@ -93,7 +93,7 @@ sacuvajBtn.addEventListener("click", () => {
     category: formCategory.value,
     qty: formQty.value,
   };
-  fetch(`http://localhost:3000/edit/${editingId}`, {
+  fetch(`${server_API}/edit/${editingId}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(proizvodIzmenjen),

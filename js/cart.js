@@ -16,7 +16,7 @@ const renderKorpe = () => {
   korpa.forEach((stavka, idx) => {
     kolicaTabela.innerHTML += `
         <tr class="zebra"><th scope="row">${idx + 1}</th>
-        <td><img src="http://localhost:3000/${stavka.img}" alt="" height="30px"></td>
+        <td><img src="${server_API}/${stavka.img}" alt="" height="30px"></td>
         <td>${stavka.name}</td>    
         <td>$${stavka.price}</td>    
         <td>${stavka.qty}</td>

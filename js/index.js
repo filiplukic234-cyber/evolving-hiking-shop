@@ -1,7 +1,7 @@
 const carouselFeatured = document.querySelector("#carousel-featured");
 let proizvodi = [];
 window.addEventListener("load", () => {
-  fetch("http://localhost:3000/")
+  fetch("${server_API}/")
     .then((res) => res.json())
     .then((resJson) => {
       console.log(resJson);
@@ -20,7 +20,7 @@ const renderProizvoda = () => {
     carouselFeatured.innerHTML += `
         <div class="item">
             <a onclick=idiNaSingle(${proizvod.id})> 
-                <img src="http://localhost:3000/${proizvod.img}" alt="">
+                <img src="${server_API}/${proizvod.img}" alt="">
                 <h3>${proizvod.name}</h3>
                 <p>$${proizvod.price}</p>
             </a>
