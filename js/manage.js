@@ -22,7 +22,7 @@ window.addEventListener("load", () => {
 });
 
 const renderProizvoda = () => {
-  fetch("${server_API}/")
+  fetch(`${server_API}/`)
     .then((response) => response.json())
     .then((responseJson) => {
       proizvodiTabela.innerHTML = "";

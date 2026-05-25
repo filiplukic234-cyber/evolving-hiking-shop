@@ -1,7 +1,7 @@
 const carouselFeatured = document.querySelector("#carousel-featured");
 let proizvodi = [];
 window.addEventListener("load", () => {
-  fetch("${server_API}/")
+  fetch(`${server_API}/`)
     .then((res) => res.json())
     .then((resJson) => {
       console.log(resJson);
