@@ -17,9 +17,6 @@ let editingId = null;
 window.addEventListener("load", () => {
   renderProizvoda();
 });
-window.addEventListener("load", () => {
-  renderProizvoda();
-});
 
 const renderProizvoda = () => {
   fetch(`${server_API}/`)
@@ -76,7 +73,7 @@ const urediProizvod = (id) => {
     .then((proizvod) => proizvod.json())
     .then((proizvodJson) => {
       //   console.log(resJson);
-      trenutniProizvod = proizvodJson[0];
+      trenutniProizvod = proizvodJson;
       formName.value = `${trenutniProizvod.name}`;
       formPrice.value = `${trenutniProizvod.price}`;
       formDesc.value = `${trenutniProizvod.desc}`;

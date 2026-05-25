@@ -15,7 +15,7 @@ window.addEventListener("load", () => {
     .then((proizvod) => proizvod.json())
     .then((proizvodJson) => {
       console.log(proizvodJson);
-      trenutniProizvod = proizvodJson[0];
+      trenutniProizvod = proizvodJson;
       slika.innerHTML = `<img src="${server_API}/${trenutniProizvod.img}" alt="">`;
       naziv.textContent = `${trenutniProizvod.name}`;
       cena.textContent = `${trenutniProizvod.price}`;
