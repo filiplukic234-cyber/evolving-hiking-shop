@@ -19,7 +19,7 @@ window.addEventListener("load", () => {
       slika.innerHTML = `<img src="${server_API}/${trenutniProizvod.img}" alt="">`;
       naziv.textContent = `${trenutniProizvod.name}`;
       cena.textContent = `${trenutniProizvod.price}`;
-      opis.textContent = `${trenutniProizvod.desc}`;
+      opis.textContent = `Description: ${trenutniProizvod.desc}`;
       qty.innerHTML = ``;
       for (let i = 1; i <= trenutniProizvod.qty; i++) {
         qty.innerHTML += `<option value="${i}">${i}</option>`;
@@ -28,9 +28,9 @@ window.addEventListener("load", () => {
       let tempKategorija = trenutniProizvod.category.split(",");
       tempKategorija.forEach((kategorija, idx) => {
         if (tempKategorija.length != idx + 1) {
-          kategorije.innerHTML += `<a href="">${kategorija.trim()}, </a>`;
+          kategorije.innerHTML += `<a class="categoryEach" href=""><span class="underline">${kategorija.trim()}</span>, &nbsp</a>`;
         } else {
-          kategorije.innerHTML += `<a href="">${kategorija.trim()} </a>`;
+          kategorije.innerHTML += `<a class="categoryEach" href=""><span class="underline">${kategorija.trim()}</span> </a>`;
         }
       });
     })

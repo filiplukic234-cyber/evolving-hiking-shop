@@ -9,12 +9,12 @@ $scripts[] = 'carousel.js';
         <div id="slika">
             <!-- <img src="img/boots.jpg" alt="BootsPhoto"> -->
         </div>
-        <div>
+        <div class="opisItema">
             <h3 id="naziv">Boots</h3>
             <div class="cena">Price: $<span id="cena">$210</span></div>
             <p id="opis">Description. IF YOU CAN SEE THIS, THE SERVER IS UNAVAILABLE</p>
             <form id="forma">
-                <label>Quantity</label>
+                <label>Quantity:</label>
                 <select id="qty" name="qty">
                     <option value="1">1</option>
                     <option value="2">2</option>

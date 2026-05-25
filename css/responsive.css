@@ -80,15 +80,32 @@
       margin: 15px auto;
       padding: 10;
     }
-    main {
+    main.featured-items.container.small-dash-before {
       margin: 0 auto;
+      padding: 20px 0;
+    }
+
+    .owl-nav {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .owl-dots {
+      display: flex;
+      flex-direction: row;
+      margin: auto;
+      width: 70%;
+    }
+
+    .owl-theme .owl-dots .owl-dot span {
+      margin: 0 auto !important;
     }
 
     /* Index end */
 
     /* Subscribe start */
     input.emailInput {
-      margin:20px;
+      margin: 20px;
     }
     button.subscribeButton {
       margin: 0 auto;
@@ -109,6 +126,38 @@
       width: 90%;
     }
     /* Products end */
+
+    /* Single start */
+
+    main.single-main.container.small-dash-before {
+      margin: 20px auto;
+      width: 90%;
+      padding: 0;
+    }
+    .opisItema {
+      margin: 20px 10px;
+    }
+    #forma label {
+      margin-right: 20px;
+    }
+    #forma #qty {
+      width: 20%;
+      padding: 7px 10px 7px 7px;
+      text-align: center;
+    }
+    #forma button {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+    }
+    .underline {
+      text-decoration: underline;
+      color: #5859a1;
+    }
+    .categoryEach::first-letter {
+      text-transform: uppercase;
+    }
+    /* Single end */
 
     /* About start */
 
@@ -145,6 +194,9 @@
     .emailInputButton {
       width: 100%;
       margin: 20px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .contact-article-part {
       padding: 0;
@@ -166,10 +218,16 @@
     /* Contact end */
 
     /* Cart start */
+    h2.korpaJePrazna {
+      margin: 30px auto;
+      width: 80%;
+    }
+
     main.cart-main.container {
       padding: 0;
       width: 90%;
       min-height: 50vh;
+      margin: 0 auto;
     }
 
     th:first-child {
@@ -178,15 +236,27 @@
     th:nth-child(4) {
       display: none;
     }
+    td:nth-child(4) {
+      display: none;
+    }
     td:last-child {
       width: 50px;
     }
     button {
+      display: flex;
+      justify-content: center;
       min-width: fit-content;
       width: 100%;
       height: 40px;
       padding: 20px 5px;
     }
+
+    .cart-container table {
+      table-layout: auto; 
+      width: 90%;
+      margin: 0 auto; 
+    }
+
     /* Cart end */
 
     /* Manage start */

@@ -7,7 +7,7 @@ window.addEventListener("load", () => {
     renderKorpe();
   } else {
     console.log("Korpa je prazna!");
-    main.innerHTML = `<h2>Korpa je prazna! Odaberi nesto!</h2>`;
+    main.innerHTML = `<h2 class="korpaJePrazna">Korpa je prazna! Odaberi nesto!</h2>`;
   }
 });
 
